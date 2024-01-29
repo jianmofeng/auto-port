@@ -1,0 +1,71 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"description": "订单服务接口文档",
+		"version": "1.0",
+		"title": "订单服务"
+	},
+	"host": "test-api.bckid.com.cn",
+	"basePath": "/order",
+	"schemes": [],
+	"consumes": ["*/*"],
+	"produces": ["*/*"],
+	"paths": {
+		"/front/orderPre/create/submitRemainOrder": {
+			"post": {
+				"tags": ["submitRemainOrder"],
+				"summary": "提交尾款订单",
+				"operationId": "submitRemainOrderUsingPOST",
+				"consumes": ["application/json"],
+				"produces": ["*/*"],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Resp«返回实体GetInterbankNumber对象»"
+						}
+					}
+				},
+				"deprecated": false,
+				"x-order": "2147483647"
+			}
+		}
+	},
+	"definitions": {
+		"Resp«返回实体GetInterbankNumber对象»": {
+			"type": "object",
+			"properties": {
+				"body": {
+					"$ref": "#/definitions/返回实体GetInterbankNumber对象"
+				},
+				"code": {
+					"type": "string"
+				},
+				"message": {
+					"type": "string"
+				}
+			},
+			"title": "Resp«返回实体GetInterbankNumber对象»"
+		},
+		"返回实体GetInterbankNumber对象": {
+			"type": "object",
+			"properties": {
+				"orgOrderId": {
+					"type": "integer",
+					"format": "int64",
+					"description": "支付订单号",
+					"refType": null
+				},
+				"payMethod": {
+					"type": "integer",
+					"format": "int32",
+					"description": "支付方式（0积分支付，1三方支付，2自有支付，30元支付）",
+					"refType": null
+				}
+			},
+			"title": "返回实体GetInterbankNumber对象"
+		}
+	}
+}
+

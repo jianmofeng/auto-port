@@ -10,7 +10,7 @@
             "request": "launch",
             "name": "本地调试",
             "program": "${workspaceFolder}/src/index.js",
-            "runtimeExecutable": "/usr/local/bin/babel-node",
+            "runtimeExecutable": "/Users/admin/Library/pnpm/babel-node",
             "port": 9229,
             "skipFiles": [
                 "<node_internals>/**"
